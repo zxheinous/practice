@@ -1,3 +1,7 @@
+package ci.nsu.mobile.main.data.storage
+import android.content.Context
+import android.content.SharedPreferences
+
 object TokenManager {
 
     private const val PREF_NAME = "auth_prefs"

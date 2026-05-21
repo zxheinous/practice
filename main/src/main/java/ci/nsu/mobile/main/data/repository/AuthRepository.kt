@@ -1,3 +1,12 @@
+package ci.nsu.mobile.main.data.repository
+
+import ci.nsu.mobile.main.data.api.RetrofitClient
+import ci.nsu.mobile.main.data.model.GroupDto
+import ci.nsu.mobile.main.data.model.LoginRequest
+import ci.nsu.mobile.main.data.model.RegisterRequest
+import ci.nsu.mobile.main.data.model.UserDto
+import ci.nsu.mobile.main.data.storage.TokenManager
+
 class AuthRepository {
 
     private val api = RetrofitClient.api

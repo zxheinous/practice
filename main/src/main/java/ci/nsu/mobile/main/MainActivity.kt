@@ -1,7 +1,17 @@
-class MainActivity : ComponentActivity() {
+package ci.nsu.mobile.main
+
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+import ci.nsu.mobile.main.data.repository.AuthRepository
+
+import ci.nsu.mobile.main.data.storage.TokenManager
+import ci.nsu.mobile.main.screens.LoginScreen
+import ci.nsu.mobile.main.ui.viewmodel.AuthViewModel
+
+class MainActivity : androidx.activity.ComponentActivity() {
 
     override fun onCreate(
-        savedInstanceState: Bundle?
+        savedInstanceState: android.os.Bundle?
     ) {
 
         super.onCreate(savedInstanceState)
@@ -11,9 +21,9 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             val navController =
-                rememberNavController()
+                androidx.navigation.compose.rememberNavController()
 
-            NavHost(
+            androidx.navigation.compose.NavHost(
                 navController = navController,
                 startDestination = "login"
             ) {
@@ -45,4 +55,8 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+private fun MainActivity.composable(string: String, function: @Composable () -> Unit) {
+    kotlin.TODO("Not yet implemented")
 }

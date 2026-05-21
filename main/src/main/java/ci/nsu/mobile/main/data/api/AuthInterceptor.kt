@@ -1,3 +1,9 @@
+package ci.nsu.mobile.main.data.api
+
+import ci.nsu.mobile.main.data.storage.TokenManager
+import okhttp3.Interceptor
+import okhttp3.Response
+
 class AuthInterceptor : Interceptor {
 
     override fun intercept(
